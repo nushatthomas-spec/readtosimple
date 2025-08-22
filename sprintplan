@@ -1,0 +1,109 @@
+# 🏃 Sprint Plan: Book Publishing App (Pay-Per-Chapter)
+
+Project Duration: ~12 weeks (6 sprints, 2 weeks each)  
+Team: 1x Frontend Dev, 1x Backend Dev, 1x Mobile Dev, 1x QA, 1x PM  
+
+---
+
+## 🌱 Sprint 1 – Foundations & Auth
+**Goal:** Establish system foundations, user accounts, and CI/CD.
+
+### Deliverables
+- User registration & login (email/password, JWT session).  
+- Role-based access (reader, author, admin).  
+- Password reset & email verification.  
+- Initial database schema (Users, Books, Chapters).  
+- CI/CD pipeline (GitHub Actions, Docker, staging env).  
+
+### Dependencies
+- None (starting point).  
+
+---
+
+## 📚 Sprint 2 – Book & Chapter Management
+**Goal:** Allow authors to create books and chapters, and readers to view them.
+
+### Deliverables
+- Author dashboard → create book (title, description, genre, price).  
+- Add chapters with editor (title, content, price).  
+- Define chapter ordering & free preview flag.  
+- Book details & Table of Contents (reader-facing).  
+- API endpoints for books/chapters (CRUD).  
+
+### Dependencies
+- User roles & auth (Sprint 1).  
+
+---
+
+## 💳 Sprint 3 – Payments & Transactions
+**Goal:** Implement microtransaction system for chapters/books.
+
+### Deliverables
+- Integrate Stripe (or PayPal) for payments.  
+- Wallet creation for readers.  
+- Chapter purchase flow (single chapter).  
+- Full book purchase flow.  
+- Transaction history (reader & author).  
+- Refund handling (admin-triggered).  
+
+### Dependencies
+- Book/Chapter data model (Sprint 2).  
+
+---
+
+## 📖 Sprint 4 – Reader Experience
+**Goal:** Deliver a polished reading experience and personal library.
+
+### Deliverables
+- Free preview rendering (Chapter 1).  
+- Reader library (purchased books/chapters).  
+- Reader mode UI (mobile + web responsive).  
+- Bookmarks & last-read tracking.  
+- Basic mobile app reader integration.  
+
+### Dependencies
+- Transactions (Sprint 3).  
+
+---
+
+## 📊 Sprint 5 – Author Analytics & Discovery
+**Goal:** Empower authors with insights, help readers find content.
+
+### Deliverables
+- Author dashboard: revenue summary & per-chapter sales analytics.  
+- Engagement tracking (views, purchases).  
+- Search books by title, author, genre.  
+- Recommendation system (basic: purchase history).  
+- API endpoints for analytics.  
+
+### Dependencies
+- Reader interactions (Sprint 4).  
+
+---
+
+## 🛠 Sprint 6 – Admin Tools & NFRs
+**Goal:** Secure, scale, and finalize the platform.
+
+### Deliverables
+- Admin dashboard (user management, content moderation).  
+- Transaction & payout monitoring.  
+- Payout processing for authors.  
+- Security hardening (PCI compliance for payments).  
+- Performance optimization (<2s page load).  
+- Monitoring & error tracking (APM, logs).  
+- Final regression testing & bug fixes.  
+
+### Dependencies
+- Payments, analytics, and user management from earlier sprints.  
+
+---
+
+# 📌 Summary Roadmap
+
+- **Sprint 1:** Auth, roles, CI/CD  
+- **Sprint 2:** Book & chapter management  
+- **Sprint 3:** Payments & wallet system  
+- **Sprint 4:** Reader experience (library + reader mode)  
+- **Sprint 5:** Analytics & discovery  
+- **Sprint 6:** Admin tools + performance/security  
+
